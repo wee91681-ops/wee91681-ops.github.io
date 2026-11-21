@@ -1,0 +1,1167 @@
+{
+  "schema_version": 2,
+  "tax_year": 2027,
+  "pack_version": 2027112101,
+  "published_at": "2027-11-21T00:00:00Z",
+  "public_audit_url": "https://rules.tipcap.app/2027",
+  "changelog_fixed_ids": [
+    "US-50-STATES-FULL-PACK"
+  ],
+  "federal": {
+    "citation": "IRS IR-2025-103 / Rev. Proc. 2025-32 / T.D. 10044",
+    "rule_confidence": "final",
+    "standard_deduction_cents": {
+      "single": 1610000,
+      "mfj": 3220000,
+      "hoh": 2415000,
+      "mfs": 1610000
+    },
+    "sec224_tips": {
+      "cap_scope": "per_return",
+      "max_deduction_cents": {
+        "single": 2500000,
+        "mfj": 2500000,
+        "hoh": 2500000,
+        "mfs": 0
+      },
+      "ssn_required": true,
+      "phaseout_threshold_cents": {
+        "single": 15000000,
+        "mfj": 30000000,
+        "hoh": 15000000
+      },
+      "phaseout_step_income_cents": 100000,
+      "phaseout_reduction_per_step_cents": 10000,
+      "sunset_year": 2028
+    },
+    "sec225_overtime": {
+      "max_deduction_cents": {
+        "single": 1250000,
+        "mfj": 2500000,
+        "hoh": 1250000,
+        "mfs": 0
+      },
+      "premium_multiplier_bps": 5000,
+      "sunset_year": 2028
+    },
+    "pub531_monthly_tip_threshold_cents": 2000,
+    "fica_employee_rate_bps": 765,
+    "seca_self_employed_rate_bps": 1530,
+    "mileage_rates_tenths_cent_per_mile": [
+      {
+        "start_date": "2027-01-01",
+        "end_date": "2027-06-30",
+        "rate_mills": 725
+      },
+      {
+        "start_date": "2027-07-01",
+        "end_date": "2027-12-31",
+        "rate_mills": 760
+      }
+    ]
+  },
+  "states": {
+    "US_FED": {
+      "rule_id": "US-FED-2027-V2",
+      "display_name": "US Federal Baseline",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "federal_baseline",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 725,
+          "min_cash_wage_cents": 213,
+          "max_tip_credit_cents": 512
+        }
+      ]
+    },
+    "AL": {
+      "rule_id": "US-AL-2027-V2",
+      "display_name": "Alabama",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "federal_baseline",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 725,
+          "min_cash_wage_cents": 213,
+          "max_tip_credit_cents": 512
+        }
+      ]
+    },
+    "AK": {
+      "rule_id": "US-AK-2027-V2",
+      "display_name": "Alaska",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "no_income_tax",
+      "wage_model": "no_tip_credit",
+      "overtime_rule": "daily_8_weekly_40",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1300,
+          "min_cash_wage_cents": 1300,
+          "max_tip_credit_cents": 0
+        }
+      ]
+    },
+    "AZ": {
+      "rule_id": "US-AZ-2027-V2",
+      "display_name": "Arizona",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1515,
+          "min_cash_wage_cents": 1215,
+          "max_tip_credit_cents": 300
+        }
+      ]
+    },
+    "AR": {
+      "rule_id": "US-AR-2027-V2",
+      "display_name": "Arkansas",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "non_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1100,
+          "min_cash_wage_cents": 263,
+          "max_tip_credit_cents": 837
+        }
+      ]
+    },
+    "CA": {
+      "rule_id": "US-CA-2027-V2",
+      "display_name": "California",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "non_conforming",
+      "wage_model": "no_tip_credit",
+      "overtime_rule": "ca_daily_8_double_12",
+      "prohibits_card_fee_deduction": true,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1740,
+          "min_cash_wage_cents": 1740,
+          "max_tip_credit_cents": 0
+        }
+      ],
+      "card_fee_statute": "Cal. Lab. Code § 351",
+      "sub_jurisdictions": {
+        "US-CA-SF": {
+          "display_name": "San Francisco",
+          "effective_periods": [
+            {
+              "start_date": "2027-01-01",
+              "end_date": "2027-12-31",
+              "statutory_min_wage_cents": 1918,
+              "min_cash_wage_cents": 1918,
+              "max_tip_credit_cents": 0
+            }
+          ]
+        },
+        "US-CA-LA": {
+          "display_name": "Los Angeles",
+          "effective_periods": [
+            {
+              "start_date": "2027-01-01",
+              "end_date": "2027-12-31",
+              "statutory_min_wage_cents": 1787,
+              "min_cash_wage_cents": 1787,
+              "max_tip_credit_cents": 0
+            }
+          ]
+        }
+      }
+    },
+    "CO": {
+      "rule_id": "US-CO-2027-V2",
+      "display_name": "Colorado",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "non_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "daily_12_weekly_40",
+      "prohibits_card_fee_deduction": true,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1516,
+          "min_cash_wage_cents": 1214,
+          "max_tip_credit_cents": 302
+        }
+      ],
+      "card_fee_statute": "Colo. Rev. Stat. § 8-4-103(6)",
+      "sub_jurisdictions": {
+        "US-CO-DEN": {
+          "display_name": "Denver",
+          "effective_periods": [
+            {
+              "start_date": "2027-01-01",
+              "end_date": "2027-12-31",
+              "statutory_min_wage_cents": 1929,
+              "min_cash_wage_cents": 1627,
+              "max_tip_credit_cents": 302
+            }
+          ]
+        }
+      }
+    },
+    "CT": {
+      "rule_id": "US-CT-2027-V2",
+      "display_name": "Connecticut",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1694,
+          "min_cash_wage_cents": 638,
+          "max_tip_credit_cents": 1056
+        }
+      ]
+    },
+    "DE": {
+      "rule_id": "US-DE-2027-V2",
+      "display_name": "Delaware",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": true,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1500,
+          "min_cash_wage_cents": 223,
+          "max_tip_credit_cents": 1277
+        }
+      ],
+      "card_fee_statute": "19 Del. C. § 902(c)"
+    },
+    "DC": {
+      "rule_id": "US-DC-2027-V2",
+      "display_name": "District of Columbia",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "non_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1795,
+          "min_cash_wage_cents": 1000,
+          "max_tip_credit_cents": 795
+        }
+      ]
+    },
+    "FL": {
+      "rule_id": "US-FL-2027-V2",
+      "display_name": "Florida",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "no_income_tax",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1500,
+          "min_cash_wage_cents": 1198,
+          "max_tip_credit_cents": 302
+        }
+      ]
+    },
+    "GA": {
+      "rule_id": "US-GA-2027-V2",
+      "display_name": "Georgia",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "partial_conforming",
+      "wage_model": "federal_baseline",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 725,
+          "min_cash_wage_cents": 213,
+          "max_tip_credit_cents": 512
+        }
+      ]
+    },
+    "HI": {
+      "rule_id": "US-HI-2027-V2",
+      "display_name": "Hawaii",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "non_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1600,
+          "min_cash_wage_cents": 1475,
+          "max_tip_credit_cents": 125
+        }
+      ]
+    },
+    "ID": {
+      "rule_id": "US-ID-2027-V2",
+      "display_name": "Idaho",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 725,
+          "min_cash_wage_cents": 335,
+          "max_tip_credit_cents": 390
+        }
+      ]
+    },
+    "IL": {
+      "rule_id": "US-IL-2027-V2",
+      "display_name": "Illinois",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1500,
+          "min_cash_wage_cents": 900,
+          "max_tip_credit_cents": 600
+        }
+      ],
+      "sub_jurisdictions": {
+        "US-IL-CHI": {
+          "display_name": "Chicago",
+          "effective_periods": [
+            {
+              "start_date": "2027-01-01",
+              "end_date": "2027-12-31",
+              "statutory_min_wage_cents": 1660,
+              "min_cash_wage_cents": 1262,
+              "max_tip_credit_cents": 398
+            }
+          ]
+        }
+      }
+    },
+    "IN": {
+      "rule_id": "US-IN-2027-V2",
+      "display_name": "Indiana",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "federal_baseline",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 725,
+          "min_cash_wage_cents": 213,
+          "max_tip_credit_cents": 512
+        }
+      ]
+    },
+    "IA": {
+      "rule_id": "US-IA-2027-V2",
+      "display_name": "Iowa",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 725,
+          "min_cash_wage_cents": 435,
+          "max_tip_credit_cents": 290
+        }
+      ]
+    },
+    "KS": {
+      "rule_id": "US-KS-2027-V2",
+      "display_name": "Kansas",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "federal_baseline",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 725,
+          "min_cash_wage_cents": 213,
+          "max_tip_credit_cents": 512
+        }
+      ]
+    },
+    "KY": {
+      "rule_id": "US-KY-2027-V2",
+      "display_name": "Kentucky",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "non_conforming",
+      "wage_model": "federal_baseline",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 725,
+          "min_cash_wage_cents": 213,
+          "max_tip_credit_cents": 512
+        }
+      ]
+    },
+    "LA": {
+      "rule_id": "US-LA-2027-V2",
+      "display_name": "Louisiana",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "federal_baseline",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 725,
+          "min_cash_wage_cents": 213,
+          "max_tip_credit_cents": 512
+        }
+      ]
+    },
+    "ME": {
+      "rule_id": "US-ME-2027-V2",
+      "display_name": "Maine",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": true,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1510,
+          "min_cash_wage_cents": 755,
+          "max_tip_credit_cents": 755
+        }
+      ],
+      "card_fee_statute": "26 M.R.S. § 664(2)"
+    },
+    "MD": {
+      "rule_id": "US-MD-2027-V2",
+      "display_name": "Maryland",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1500,
+          "min_cash_wage_cents": 363,
+          "max_tip_credit_cents": 1137
+        }
+      ]
+    },
+    "MA": {
+      "rule_id": "US-MA-2027-V2",
+      "display_name": "Massachusetts",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "non_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": true,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1500,
+          "min_cash_wage_cents": 675,
+          "max_tip_credit_cents": 825
+        }
+      ],
+      "card_fee_statute": "M.G.L. c. 149 § 152A"
+    },
+    "MI": {
+      "rule_id": "US-MI-2027-V2",
+      "display_name": "Michigan",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1373,
+          "min_cash_wage_cents": 549,
+          "max_tip_credit_cents": 824
+        }
+      ]
+    },
+    "MN": {
+      "rule_id": "US-MN-2027-V2",
+      "display_name": "Minnesota",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "non_conforming",
+      "wage_model": "no_tip_credit",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": true,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1141,
+          "min_cash_wage_cents": 1141,
+          "max_tip_credit_cents": 0
+        }
+      ],
+      "card_fee_statute": "Minn. Stat. § 177.24, Subd. 3a(b)"
+    },
+    "MS": {
+      "rule_id": "US-MS-2027-V2",
+      "display_name": "Mississippi",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "federal_baseline",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 725,
+          "min_cash_wage_cents": 213,
+          "max_tip_credit_cents": 512
+        }
+      ]
+    },
+    "MO": {
+      "rule_id": "US-MO-2027-V2",
+      "display_name": "Missouri",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1500,
+          "min_cash_wage_cents": 750,
+          "max_tip_credit_cents": 750
+        }
+      ]
+    },
+    "MT": {
+      "rule_id": "US-MT-2027-V2",
+      "display_name": "Montana",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "no_tip_credit",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1085,
+          "min_cash_wage_cents": 1085,
+          "max_tip_credit_cents": 0
+        }
+      ]
+    },
+    "NE": {
+      "rule_id": "US-NE-2027-V2",
+      "display_name": "Nebraska",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1500,
+          "min_cash_wage_cents": 213,
+          "max_tip_credit_cents": 1287
+        }
+      ]
+    },
+    "NV": {
+      "rule_id": "US-NV-2027-V2",
+      "display_name": "Nevada",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "no_income_tax",
+      "wage_model": "no_tip_credit",
+      "overtime_rule": "daily_8_weekly_40",
+      "prohibits_card_fee_deduction": true,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1200,
+          "min_cash_wage_cents": 1200,
+          "max_tip_credit_cents": 0
+        }
+      ],
+      "card_fee_statute": "NRS § 608.160"
+    },
+    "NH": {
+      "rule_id": "US-NH-2027-V2",
+      "display_name": "New Hampshire",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "no_income_tax",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 725,
+          "min_cash_wage_cents": 327,
+          "max_tip_credit_cents": 398
+        }
+      ]
+    },
+    "NJ": {
+      "rule_id": "US-NJ-2027-V2",
+      "display_name": "New Jersey",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "non_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": true,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1642,
+          "min_cash_wage_cents": 562,
+          "max_tip_credit_cents": 1080
+        }
+      ],
+      "card_fee_statute": "N.J.A.C. § 12:56-3.5(g)"
+    },
+    "NM": {
+      "rule_id": "US-NM-2027-V2",
+      "display_name": "New Mexico",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1200,
+          "min_cash_wage_cents": 300,
+          "max_tip_credit_cents": 900
+        }
+      ]
+    },
+    "NY": {
+      "rule_id": "US-NY-2027-V2",
+      "display_name": "New York",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1700,
+          "min_cash_wage_cents": 1135,
+          "max_tip_credit_cents": 565
+        }
+      ],
+      "sub_jurisdictions": {
+        "US-NY-NYC": {
+          "display_name": "New York City",
+          "effective_periods": [
+            {
+              "start_date": "2027-01-01",
+              "end_date": "2027-12-31",
+              "statutory_min_wage_cents": 1700,
+              "min_cash_wage_cents": 1135,
+              "max_tip_credit_cents": 565
+            }
+          ]
+        },
+        "US-NY-LIW": {
+          "display_name": "Long Island & Westchester",
+          "effective_periods": [
+            {
+              "start_date": "2027-01-01",
+              "end_date": "2027-12-31",
+              "statutory_min_wage_cents": 1650,
+              "min_cash_wage_cents": 1100,
+              "max_tip_credit_cents": 550
+            }
+          ]
+        },
+        "US-NY-UPSTATE": {
+          "display_name": "Upstate New York",
+          "effective_periods": [
+            {
+              "start_date": "2027-01-01",
+              "end_date": "2027-12-31",
+              "statutory_min_wage_cents": 1550,
+              "min_cash_wage_cents": 1035,
+              "max_tip_credit_cents": 515
+            }
+          ]
+        }
+      }
+    },
+    "NC": {
+      "rule_id": "US-NC-2027-V2",
+      "display_name": "North Carolina",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "non_conforming",
+      "wage_model": "federal_baseline",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 725,
+          "min_cash_wage_cents": 213,
+          "max_tip_credit_cents": 512
+        }
+      ]
+    },
+    "ND": {
+      "rule_id": "US-ND-2027-V2",
+      "display_name": "North Dakota",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 725,
+          "min_cash_wage_cents": 486,
+          "max_tip_credit_cents": 239
+        }
+      ]
+    },
+    "OH": {
+      "rule_id": "US-OH-2027-V2",
+      "display_name": "Ohio",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1100,
+          "min_cash_wage_cents": 550,
+          "max_tip_credit_cents": 550
+        }
+      ]
+    },
+    "OK": {
+      "rule_id": "US-OK-2027-V2",
+      "display_name": "Oklahoma",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "federal_baseline",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 725,
+          "min_cash_wage_cents": 213,
+          "max_tip_credit_cents": 512
+        }
+      ]
+    },
+    "OR": {
+      "rule_id": "US-OR-2027-V2",
+      "display_name": "Oregon",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "no_tip_credit",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1545,
+          "min_cash_wage_cents": 1545,
+          "max_tip_credit_cents": 0
+        }
+      ]
+    },
+    "PA": {
+      "rule_id": "US-PA-2027-V2",
+      "display_name": "Pennsylvania",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "non_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 725,
+          "min_cash_wage_cents": 283,
+          "max_tip_credit_cents": 442
+        }
+      ]
+    },
+    "RI": {
+      "rule_id": "US-RI-2027-V2",
+      "display_name": "Rhode Island",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1600,
+          "min_cash_wage_cents": 389,
+          "max_tip_credit_cents": 1211
+        }
+      ]
+    },
+    "SC": {
+      "rule_id": "US-SC-2027-V2",
+      "display_name": "South Carolina",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "federal_baseline",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 725,
+          "min_cash_wage_cents": 213,
+          "max_tip_credit_cents": 512
+        }
+      ]
+    },
+    "SD": {
+      "rule_id": "US-SD-2027-V2",
+      "display_name": "South Dakota",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "no_income_tax",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1185,
+          "min_cash_wage_cents": 593,
+          "max_tip_credit_cents": 592
+        }
+      ]
+    },
+    "TN": {
+      "rule_id": "US-TN-2027-V2",
+      "display_name": "Tennessee",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "no_income_tax",
+      "wage_model": "federal_baseline",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 725,
+          "min_cash_wage_cents": 213,
+          "max_tip_credit_cents": 512
+        }
+      ]
+    },
+    "TX": {
+      "rule_id": "US-TX-2027-V2",
+      "display_name": "Texas",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "no_income_tax",
+      "wage_model": "federal_baseline",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 725,
+          "min_cash_wage_cents": 213,
+          "max_tip_credit_cents": 512
+        }
+      ]
+    },
+    "UT": {
+      "rule_id": "US-UT-2027-V2",
+      "display_name": "Utah",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "federal_baseline",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 725,
+          "min_cash_wage_cents": 213,
+          "max_tip_credit_cents": 512
+        }
+      ]
+    },
+    "VT": {
+      "rule_id": "US-VT-2027-V2",
+      "display_name": "Vermont",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1442,
+          "min_cash_wage_cents": 721,
+          "max_tip_credit_cents": 721
+        }
+      ]
+    },
+    "VA": {
+      "rule_id": "US-VA-2027-V2",
+      "display_name": "Virginia",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1277,
+          "min_cash_wage_cents": 213,
+          "max_tip_credit_cents": 1064
+        }
+      ]
+    },
+    "WA": {
+      "rule_id": "US-WA-2027-V2",
+      "display_name": "Washington",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "no_income_tax",
+      "wage_model": "no_tip_credit",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 1763,
+          "min_cash_wage_cents": 1763,
+          "max_tip_credit_cents": 0
+        }
+      ],
+      "sub_jurisdictions": {
+        "US-WA-SEA": {
+          "display_name": "Seattle",
+          "effective_periods": [
+            {
+              "start_date": "2027-01-01",
+              "end_date": "2027-12-31",
+              "statutory_min_wage_cents": 2130,
+              "min_cash_wage_cents": 2130,
+              "max_tip_credit_cents": 0
+            }
+          ]
+        }
+      }
+    },
+    "WV": {
+      "rule_id": "US-WV-2027-V2",
+      "display_name": "West Virginia",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "full_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 875,
+          "min_cash_wage_cents": 263,
+          "max_tip_credit_cents": 612
+        }
+      ]
+    },
+    "WI": {
+      "rule_id": "US-WI-2027-V2",
+      "display_name": "Wisconsin",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "non_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 725,
+          "min_cash_wage_cents": 233,
+          "max_tip_credit_cents": 492
+        }
+      ]
+    },
+    "WY": {
+      "rule_id": "US-WY-2027-V2",
+      "display_name": "Wyoming",
+      "last_verified_at": "2027-01-01",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "no_income_tax",
+      "wage_model": "federal_baseline",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "effective_periods": [
+        {
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "statutory_min_wage_cents": 725,
+          "min_cash_wage_cents": 213,
+          "max_tip_credit_cents": 512
+        }
+      ]
+    }
+  }
+}
