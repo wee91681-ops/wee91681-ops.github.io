@@ -1,20 +1,149 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "tax_year": 2026,
-  "pack_version": 2026112101,
+  "pack_version": 2026112103,
   "published_at": "2026-11-21T00:00:00Z",
   "public_audit_url": "https://wee91681-ops.github.io/tipcap/policies/policy_pack_us_2026.json",
   "changelog_fixed_ids": [
-    "US-50-STATES-FULL-PACK"
+    "SSOT-V3-DOL-2026-11-05",
+    "IRS-REV-PROC-2026-35-TY2027",
+    "CARD-FEE-6-STATES-ONLY",
+    "NY-NAIL-NO-TIP-CREDIT",
+    "CT-BARTENDER-OVERRIDE",
+    "OR-3-TIER-WAGE",
+    "AK-SF-LA-H2-2026",
+    "CONSERVATIVE-STATE-CONFORMITY"
   ],
   "federal": {
-    "citation": "IRS IR-2025-103 / Rev. Proc. 2025-32 / T.D. 10044",
+    "citation": "IRS IR-2025-103 / Rev. Proc. 2025-32 / T.D. 10044 / Ann. 2026-11",
     "rule_confidence": "final",
     "standard_deduction_cents": {
       "single": 1610000,
       "mfj": 3220000,
       "hoh": 2415000,
       "mfs": 1610000
+    },
+    "tax_brackets_cents": {
+      "single": [
+        {
+          "upper_bound_cents": 1240000,
+          "rate_bps": 1000
+        },
+        {
+          "upper_bound_cents": 5040000,
+          "rate_bps": 1200
+        },
+        {
+          "upper_bound_cents": 10570000,
+          "rate_bps": 2200
+        },
+        {
+          "upper_bound_cents": 20177500,
+          "rate_bps": 2400
+        },
+        {
+          "upper_bound_cents": 25622500,
+          "rate_bps": 3200
+        },
+        {
+          "upper_bound_cents": 64060000,
+          "rate_bps": 3500
+        },
+        {
+          "upper_bound_cents": 999999999999,
+          "rate_bps": 3700
+        }
+      ],
+      "mfs": [
+        {
+          "upper_bound_cents": 1240000,
+          "rate_bps": 1000
+        },
+        {
+          "upper_bound_cents": 5040000,
+          "rate_bps": 1200
+        },
+        {
+          "upper_bound_cents": 10570000,
+          "rate_bps": 2200
+        },
+        {
+          "upper_bound_cents": 20177500,
+          "rate_bps": 2400
+        },
+        {
+          "upper_bound_cents": 25622500,
+          "rate_bps": 3200
+        },
+        {
+          "upper_bound_cents": 38435000,
+          "rate_bps": 3500
+        },
+        {
+          "upper_bound_cents": 999999999999,
+          "rate_bps": 3700
+        }
+      ],
+      "mfj": [
+        {
+          "upper_bound_cents": 2480000,
+          "rate_bps": 1000
+        },
+        {
+          "upper_bound_cents": 10080000,
+          "rate_bps": 1200
+        },
+        {
+          "upper_bound_cents": 21140000,
+          "rate_bps": 2200
+        },
+        {
+          "upper_bound_cents": 40355000,
+          "rate_bps": 2400
+        },
+        {
+          "upper_bound_cents": 51245000,
+          "rate_bps": 3200
+        },
+        {
+          "upper_bound_cents": 76870000,
+          "rate_bps": 3500
+        },
+        {
+          "upper_bound_cents": 999999999999,
+          "rate_bps": 3700
+        }
+      ],
+      "hoh": [
+        {
+          "upper_bound_cents": 1770000,
+          "rate_bps": 1000
+        },
+        {
+          "upper_bound_cents": 6745000,
+          "rate_bps": 1200
+        },
+        {
+          "upper_bound_cents": 10570000,
+          "rate_bps": 2200
+        },
+        {
+          "upper_bound_cents": 20175000,
+          "rate_bps": 2400
+        },
+        {
+          "upper_bound_cents": 25620000,
+          "rate_bps": 3200
+        },
+        {
+          "upper_bound_cents": 64060000,
+          "rate_bps": 3500
+        },
+        {
+          "upper_bound_cents": 999999999999,
+          "rate_bps": 3700
+        }
+      ]
     },
     "sec224_tips": {
       "cap_scope": "per_return",
@@ -47,6 +176,7 @@
     "pub531_monthly_tip_threshold_cents": 2000,
     "fica_employee_rate_bps": 765,
     "seca_self_employed_rate_bps": 1530,
+    "social_security_wage_base_cents": 18450000,
     "mileage_rates_tenths_cent_per_mile": [
       {
         "start_date": "2026-01-01",
@@ -62,14 +192,16 @@
   },
   "states": {
     "US_FED": {
-      "rule_id": "US-FED-2026-V2",
+      "rule_id": "US-FED-2026-V3",
       "display_name": "US Federal Baseline",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "federal_baseline",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://www.irs.gov/newsroom/working-families-tax-cuts",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -81,14 +213,16 @@
       ]
     },
     "AL": {
-      "rule_id": "US-AL-2026-V2",
+      "rule_id": "US-AL-2026-V3",
       "display_name": "Alabama",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "federal_baseline",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://www.revenue.alabama.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -100,33 +234,44 @@
       ]
     },
     "AK": {
-      "rule_id": "US-AK-2026-V2",
+      "rule_id": "US-AK-2026-V3",
       "display_name": "Alaska",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "no_income_tax",
       "wage_model": "no_tip_credit",
       "overtime_rule": "daily_8_weekly_40",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://tax.alaska.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
-          "end_date": "2026-12-31",
+          "end_date": "2026-06-30",
           "statutory_min_wage_cents": 1300,
           "min_cash_wage_cents": 1300,
+          "max_tip_credit_cents": 0
+        },
+        {
+          "start_date": "2026-07-01",
+          "end_date": "2026-12-31",
+          "statutory_min_wage_cents": 1400,
+          "min_cash_wage_cents": 1400,
           "max_tip_credit_cents": 0
         }
       ]
     },
     "AZ": {
-      "rule_id": "US-AZ-2026-V2",
+      "rule_id": "US-AZ-2026-V3",
       "display_name": "Arizona",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "full_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://azdor.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -138,14 +283,16 @@
       ]
     },
     "AR": {
-      "rule_id": "US-AR-2026-V2",
+      "rule_id": "US-AR-2026-V3",
       "display_name": "Arkansas",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "non_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://www.dfa.arkansas.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -157,14 +304,16 @@
       ]
     },
     "CA": {
-      "rule_id": "US-CA-2026-V2",
+      "rule_id": "US-CA-2026-V3",
       "display_name": "California",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "non_conforming",
       "wage_model": "no_tip_credit",
       "overtime_rule": "ca_daily_8_double_12",
       "prohibits_card_fee_deduction": true,
+      "official_labor_url": "https://www.dir.ca.gov/dlse/FAQ_TipsAndGratuities.htm",
+      "official_tax_url": "https://www.ftb.ca.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -178,24 +327,40 @@
       "sub_jurisdictions": {
         "US-CA-SF": {
           "display_name": "San Francisco",
+          "official_labor_url": "https://www.sf.gov/information--minimum-wage-ordinance",
           "effective_periods": [
             {
               "start_date": "2026-01-01",
-              "end_date": "2026-12-31",
+              "end_date": "2026-06-30",
               "statutory_min_wage_cents": 1918,
               "min_cash_wage_cents": 1918,
+              "max_tip_credit_cents": 0
+            },
+            {
+              "start_date": "2026-07-01",
+              "end_date": "2026-12-31",
+              "statutory_min_wage_cents": 1961,
+              "min_cash_wage_cents": 1961,
               "max_tip_credit_cents": 0
             }
           ]
         },
         "US-CA-LA": {
           "display_name": "Los Angeles",
+          "official_labor_url": "https://wagesla.lacity.gov/",
           "effective_periods": [
             {
               "start_date": "2026-01-01",
-              "end_date": "2026-12-31",
+              "end_date": "2026-06-30",
               "statutory_min_wage_cents": 1787,
               "min_cash_wage_cents": 1787,
+              "max_tip_credit_cents": 0
+            },
+            {
+              "start_date": "2026-07-01",
+              "end_date": "2026-12-31",
+              "statutory_min_wage_cents": 1842,
+              "min_cash_wage_cents": 1842,
               "max_tip_credit_cents": 0
             }
           ]
@@ -203,14 +368,16 @@
       }
     },
     "CO": {
-      "rule_id": "US-CO-2026-V2",
+      "rule_id": "US-CO-2026-V3",
       "display_name": "Colorado",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "non_conforming",
+      "tip_tax_conformity": "partial_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "daily_12_weekly_40",
-      "prohibits_card_fee_deduction": true,
+      "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://tax.colorado.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -220,7 +387,6 @@
           "max_tip_credit_cents": 302
         }
       ],
-      "card_fee_statute": "Colo. Rev. Stat. § 8-4-103(6)",
       "sub_jurisdictions": {
         "US-CO-DEN": {
           "display_name": "Denver",
@@ -237,14 +403,16 @@
       }
     },
     "CT": {
-      "rule_id": "US-CT-2026-V2",
+      "rule_id": "US-CT-2026-V3",
       "display_name": "Connecticut",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://portal.ct.gov/drs",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -253,17 +421,27 @@
           "min_cash_wage_cents": 638,
           "max_tip_credit_cents": 1056
         }
-      ]
+      ],
+      "role_wage_overrides": {
+        "bartender": {
+          "statutory_min_wage_cents": 1694,
+          "min_cash_wage_cents": 823,
+          "max_tip_credit_cents": 871,
+          "wage_model": "tip_credit_allowed"
+        }
+      }
     },
     "DE": {
-      "rule_id": "US-DE-2026-V2",
+      "rule_id": "US-DE-2026-V3",
       "display_name": "Delaware",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": true,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://revenue.delaware.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -276,36 +454,54 @@
       "card_fee_statute": "19 Del. C. § 902(c)"
     },
     "DC": {
-      "rule_id": "US-DC-2026-V2",
+      "rule_id": "US-DC-2026-V3",
       "display_name": "District of Columbia",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "non_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://otr.cfo.dc.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
-          "end_date": "2026-12-31",
+          "end_date": "2026-06-30",
           "statutory_min_wage_cents": 1795,
           "min_cash_wage_cents": 1000,
           "max_tip_credit_cents": 795
+        },
+        {
+          "start_date": "2026-07-01",
+          "end_date": "2026-12-31",
+          "statutory_min_wage_cents": 1840,
+          "min_cash_wage_cents": 1030,
+          "max_tip_credit_cents": 810
         }
       ]
     },
     "FL": {
-      "rule_id": "US-FL-2026-V2",
+      "rule_id": "US-FL-2026-V3",
       "display_name": "Florida",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "no_income_tax",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://floridarevenue.com/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
+          "end_date": "2026-09-29",
+          "statutory_min_wage_cents": 1400,
+          "min_cash_wage_cents": 1098,
+          "max_tip_credit_cents": 302
+        },
+        {
+          "start_date": "2026-09-30",
           "end_date": "2026-12-31",
           "statutory_min_wage_cents": 1500,
           "min_cash_wage_cents": 1198,
@@ -314,14 +510,16 @@
       ]
     },
     "GA": {
-      "rule_id": "US-GA-2026-V2",
+      "rule_id": "US-GA-2026-V3",
       "display_name": "Georgia",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "partial_conforming",
       "wage_model": "federal_baseline",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://dor.georgia.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -330,17 +528,20 @@
           "min_cash_wage_cents": 213,
           "max_tip_credit_cents": 512
         }
-      ]
+      ],
+      "state_conformity_cap_cents": 175000
     },
     "HI": {
-      "rule_id": "US-HI-2026-V2",
+      "rule_id": "US-HI-2026-V3",
       "display_name": "Hawaii",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "non_conforming",
+      "tip_tax_conformity": "full_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://tax.hawaii.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -352,14 +553,16 @@
       ]
     },
     "ID": {
-      "rule_id": "US-ID-2026-V2",
+      "rule_id": "US-ID-2026-V3",
       "display_name": "Idaho",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "full_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://tax.idaho.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -371,14 +574,16 @@
       ]
     },
     "IL": {
-      "rule_id": "US-IL-2026-V2",
+      "rule_id": "US-IL-2026-V3",
       "display_name": "Illinois",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://tax.illinois.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -391,27 +596,37 @@
       "sub_jurisdictions": {
         "US-IL-CHI": {
           "display_name": "Chicago",
+          "rule_confidence": "final",
           "effective_periods": [
             {
               "start_date": "2026-01-01",
-              "end_date": "2026-12-31",
+              "end_date": "2026-06-30",
               "statutory_min_wage_cents": 1660,
               "min_cash_wage_cents": 1262,
               "max_tip_credit_cents": 398
+            },
+            {
+              "start_date": "2026-07-01",
+              "end_date": "2026-12-31",
+              "statutory_min_wage_cents": 1705,
+              "min_cash_wage_cents": 1296,
+              "max_tip_credit_cents": 409
             }
           ]
         }
       }
     },
     "IN": {
-      "rule_id": "US-IN-2026-V2",
+      "rule_id": "US-IN-2026-V3",
       "display_name": "Indiana",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "federal_baseline",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://www.in.gov/dor/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -423,14 +638,16 @@
       ]
     },
     "IA": {
-      "rule_id": "US-IA-2026-V2",
+      "rule_id": "US-IA-2026-V3",
       "display_name": "Iowa",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "full_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://revenue.iowa.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -442,14 +659,16 @@
       ]
     },
     "KS": {
-      "rule_id": "US-KS-2026-V2",
+      "rule_id": "US-KS-2026-V3",
       "display_name": "Kansas",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "federal_baseline",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://www.ksrevenue.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -461,14 +680,16 @@
       ]
     },
     "KY": {
-      "rule_id": "US-KY-2026-V2",
+      "rule_id": "US-KY-2026-V3",
       "display_name": "Kentucky",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "non_conforming",
       "wage_model": "federal_baseline",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://revenue.ky.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -480,14 +701,16 @@
       ]
     },
     "LA": {
-      "rule_id": "US-LA-2026-V2",
+      "rule_id": "US-LA-2026-V3",
       "display_name": "Louisiana",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "federal_baseline",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://revenue.louisiana.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -499,14 +722,16 @@
       ]
     },
     "ME": {
-      "rule_id": "US-ME-2026-V2",
+      "rule_id": "US-ME-2026-V3",
       "display_name": "Maine",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": true,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://www.maine.gov/revenue/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -519,14 +744,16 @@
       "card_fee_statute": "26 M.R.S. § 664(2)"
     },
     "MD": {
-      "rule_id": "US-MD-2026-V2",
+      "rule_id": "US-MD-2026-V3",
       "display_name": "Maryland",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://www.marylandtaxes.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -538,14 +765,16 @@
       ]
     },
     "MA": {
-      "rule_id": "US-MA-2026-V2",
+      "rule_id": "US-MA-2026-V3",
       "display_name": "Massachusetts",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "non_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": true,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://www.mass.gov/orgs/massachusetts-department-of-revenue",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -558,14 +787,16 @@
       "card_fee_statute": "M.G.L. c. 149 § 152A"
     },
     "MI": {
-      "rule_id": "US-MI-2026-V2",
+      "rule_id": "US-MI-2026-V3",
       "display_name": "Michigan",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://www.michigan.gov/taxes",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -577,14 +808,16 @@
       ]
     },
     "MN": {
-      "rule_id": "US-MN-2026-V2",
+      "rule_id": "US-MN-2026-V3",
       "display_name": "Minnesota",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "non_conforming",
       "wage_model": "no_tip_credit",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": true,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://www.revenue.state.mn.us/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -597,14 +830,16 @@
       "card_fee_statute": "Minn. Stat. § 177.24, Subd. 3a(b)"
     },
     "MS": {
-      "rule_id": "US-MS-2026-V2",
+      "rule_id": "US-MS-2026-V3",
       "display_name": "Mississippi",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "federal_baseline",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://www.dor.ms.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -616,14 +851,16 @@
       ]
     },
     "MO": {
-      "rule_id": "US-MO-2026-V2",
+      "rule_id": "US-MO-2026-V3",
       "display_name": "Missouri",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://dor.mo.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -635,14 +872,16 @@
       ]
     },
     "MT": {
-      "rule_id": "US-MT-2026-V2",
+      "rule_id": "US-MT-2026-V3",
       "display_name": "Montana",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "full_conforming",
       "wage_model": "no_tip_credit",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://mtrevenue.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -654,14 +893,16 @@
       ]
     },
     "NE": {
-      "rule_id": "US-NE-2026-V2",
+      "rule_id": "US-NE-2026-V3",
       "display_name": "Nebraska",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://revenue.nebraska.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -673,14 +914,16 @@
       ]
     },
     "NV": {
-      "rule_id": "US-NV-2026-V2",
+      "rule_id": "US-NV-2026-V3",
       "display_name": "Nevada",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "no_income_tax",
       "wage_model": "no_tip_credit",
-      "overtime_rule": "daily_8_weekly_40",
-      "prohibits_card_fee_deduction": true,
+      "overtime_rule": "nv_daily_8_under_15x_min_weekly_40",
+      "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://tax.nv.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -689,18 +932,19 @@
           "min_cash_wage_cents": 1200,
           "max_tip_credit_cents": 0
         }
-      ],
-      "card_fee_statute": "NRS § 608.160"
+      ]
     },
     "NH": {
-      "rule_id": "US-NH-2026-V2",
+      "rule_id": "US-NH-2026-V3",
       "display_name": "New Hampshire",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "no_income_tax",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://www.revenue.nh.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -712,34 +956,38 @@
       ]
     },
     "NJ": {
-      "rule_id": "US-NJ-2026-V2",
+      "rule_id": "US-NJ-2026-V3",
       "display_name": "New Jersey",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "non_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": true,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://www.nj.gov/treasury/taxation/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
           "end_date": "2026-12-31",
           "statutory_min_wage_cents": 1592,
-          "min_cash_wage_cents": 562,
-          "max_tip_credit_cents": 1030
+          "min_cash_wage_cents": 605,
+          "max_tip_credit_cents": 987
         }
       ],
       "card_fee_statute": "N.J.A.C. § 12:56-3.5(g)"
     },
     "NM": {
-      "rule_id": "US-NM-2026-V2",
+      "rule_id": "US-NM-2026-V3",
       "display_name": "New Mexico",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://www.tax.newmexico.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -751,71 +999,158 @@
       ]
     },
     "NY": {
-      "rule_id": "US-NY-2026-V2",
+      "rule_id": "US-NY-2026-V3",
       "display_name": "New York",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://dol.ny.gov/minimum-wage-tipped-workers",
+      "official_tax_url": "https://www.tax.ny.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
           "end_date": "2026-12-31",
-          "statutory_min_wage_cents": 1650,
-          "min_cash_wage_cents": 1100,
-          "max_tip_credit_cents": 550
+          "statutory_min_wage_cents": 1700,
+          "min_cash_wage_cents": 1135,
+          "max_tip_credit_cents": 565
         }
       ],
+      "role_wage_overrides": {
+        "nail_tech": {
+          "statutory_min_wage_cents": 1700,
+          "min_cash_wage_cents": 1700,
+          "max_tip_credit_cents": 0,
+          "wage_model": "no_tip_credit"
+        },
+        "salon": {
+          "statutory_min_wage_cents": 1700,
+          "min_cash_wage_cents": 1700,
+          "max_tip_credit_cents": 0,
+          "wage_model": "no_tip_credit"
+        },
+        "service": {
+          "statutory_min_wage_cents": 1700,
+          "min_cash_wage_cents": 1415,
+          "max_tip_credit_cents": 285,
+          "wage_model": "tip_credit_allowed"
+        }
+      },
       "sub_jurisdictions": {
         "US-NY-NYC": {
           "display_name": "New York City",
+          "official_labor_url": "https://dol.ny.gov/minimum-wage-tipped-workers",
           "effective_periods": [
             {
               "start_date": "2026-01-01",
               "end_date": "2026-12-31",
-              "statutory_min_wage_cents": 1650,
-              "min_cash_wage_cents": 1100,
-              "max_tip_credit_cents": 550
+              "statutory_min_wage_cents": 1700,
+              "min_cash_wage_cents": 1135,
+              "max_tip_credit_cents": 565
             }
-          ]
+          ],
+          "role_wage_overrides": {
+            "nail_tech": {
+              "statutory_min_wage_cents": 1700,
+              "min_cash_wage_cents": 1700,
+              "max_tip_credit_cents": 0,
+              "wage_model": "no_tip_credit"
+            },
+            "salon": {
+              "statutory_min_wage_cents": 1700,
+              "min_cash_wage_cents": 1700,
+              "max_tip_credit_cents": 0,
+              "wage_model": "no_tip_credit"
+            },
+            "service": {
+              "statutory_min_wage_cents": 1700,
+              "min_cash_wage_cents": 1415,
+              "max_tip_credit_cents": 285,
+              "wage_model": "tip_credit_allowed"
+            }
+          }
         },
         "US-NY-LIW": {
           "display_name": "Long Island & Westchester",
+          "official_labor_url": "https://dol.ny.gov/minimum-wage-tipped-workers",
           "effective_periods": [
             {
               "start_date": "2026-01-01",
               "end_date": "2026-12-31",
-              "statutory_min_wage_cents": 1650,
-              "min_cash_wage_cents": 1100,
-              "max_tip_credit_cents": 550
+              "statutory_min_wage_cents": 1700,
+              "min_cash_wage_cents": 1135,
+              "max_tip_credit_cents": 565
             }
-          ]
+          ],
+          "role_wage_overrides": {
+            "nail_tech": {
+              "statutory_min_wage_cents": 1700,
+              "min_cash_wage_cents": 1700,
+              "max_tip_credit_cents": 0,
+              "wage_model": "no_tip_credit"
+            },
+            "salon": {
+              "statutory_min_wage_cents": 1700,
+              "min_cash_wage_cents": 1700,
+              "max_tip_credit_cents": 0,
+              "wage_model": "no_tip_credit"
+            },
+            "service": {
+              "statutory_min_wage_cents": 1700,
+              "min_cash_wage_cents": 1415,
+              "max_tip_credit_cents": 285,
+              "wage_model": "tip_credit_allowed"
+            }
+          }
         },
         "US-NY-UPSTATE": {
           "display_name": "Upstate New York",
+          "official_labor_url": "https://dol.ny.gov/minimum-wage-tipped-workers",
           "effective_periods": [
             {
               "start_date": "2026-01-01",
               "end_date": "2026-12-31",
-              "statutory_min_wage_cents": 1550,
-              "min_cash_wage_cents": 1035,
-              "max_tip_credit_cents": 515
+              "statutory_min_wage_cents": 1600,
+              "min_cash_wage_cents": 1070,
+              "max_tip_credit_cents": 530
             }
-          ]
+          ],
+          "role_wage_overrides": {
+            "nail_tech": {
+              "statutory_min_wage_cents": 1600,
+              "min_cash_wage_cents": 1600,
+              "max_tip_credit_cents": 0,
+              "wage_model": "no_tip_credit"
+            },
+            "salon": {
+              "statutory_min_wage_cents": 1600,
+              "min_cash_wage_cents": 1600,
+              "max_tip_credit_cents": 0,
+              "wage_model": "no_tip_credit"
+            },
+            "service": {
+              "statutory_min_wage_cents": 1600,
+              "min_cash_wage_cents": 1330,
+              "max_tip_credit_cents": 270,
+              "wage_model": "tip_credit_allowed"
+            }
+          }
         }
       }
     },
     "NC": {
-      "rule_id": "US-NC-2026-V2",
+      "rule_id": "US-NC-2026-V3",
       "display_name": "North Carolina",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "non_conforming",
       "wage_model": "federal_baseline",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://www.ncdor.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -827,14 +1162,16 @@
       ]
     },
     "ND": {
-      "rule_id": "US-ND-2026-V2",
+      "rule_id": "US-ND-2026-V3",
       "display_name": "North Dakota",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "full_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://www.tax.nd.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -846,14 +1183,16 @@
       ]
     },
     "OH": {
-      "rule_id": "US-OH-2026-V2",
+      "rule_id": "US-OH-2026-V3",
       "display_name": "Ohio",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://tax.ohio.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -865,14 +1204,16 @@
       ]
     },
     "OK": {
-      "rule_id": "US-OK-2026-V2",
+      "rule_id": "US-OK-2026-V3",
       "display_name": "Oklahoma",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "federal_baseline",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://oklahoma.gov/tax.html",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -884,33 +1225,63 @@
       ]
     },
     "OR": {
-      "rule_id": "US-OR-2026-V2",
-      "display_name": "Oregon",
-      "last_verified_at": "2026-01-01",
+      "rule_id": "US-OR-2026-V3",
+      "display_name": "Oregon (Standard)",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "full_conforming",
       "wage_model": "no_tip_credit",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://www.oregon.gov/dor/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
           "end_date": "2026-12-31",
-          "statutory_min_wage_cents": 1545,
-          "min_cash_wage_cents": 1545,
+          "statutory_min_wage_cents": 1555,
+          "min_cash_wage_cents": 1555,
           "max_tip_credit_cents": 0
         }
-      ]
+      ],
+      "sub_jurisdictions": {
+        "US-OR-PDX": {
+          "display_name": "Portland Metro",
+          "effective_periods": [
+            {
+              "start_date": "2026-01-01",
+              "end_date": "2026-12-31",
+              "statutory_min_wage_cents": 1680,
+              "min_cash_wage_cents": 1680,
+              "max_tip_credit_cents": 0
+            }
+          ]
+        },
+        "US-OR-NONURBAN": {
+          "display_name": "Nonurban Counties",
+          "effective_periods": [
+            {
+              "start_date": "2026-01-01",
+              "end_date": "2026-12-31",
+              "statutory_min_wage_cents": 1455,
+              "min_cash_wage_cents": 1455,
+              "max_tip_credit_cents": 0
+            }
+          ]
+        }
+      }
     },
     "PA": {
-      "rule_id": "US-PA-2026-V2",
+      "rule_id": "US-PA-2026-V3",
       "display_name": "Pennsylvania",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "non_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://www.pa.gov/agencies/revenue.html",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -922,14 +1293,16 @@
       ]
     },
     "RI": {
-      "rule_id": "US-RI-2026-V2",
+      "rule_id": "US-RI-2026-V3",
       "display_name": "Rhode Island",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://tax.ri.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -941,14 +1314,16 @@
       ]
     },
     "SC": {
-      "rule_id": "US-SC-2026-V2",
+      "rule_id": "US-SC-2026-V3",
       "display_name": "South Carolina",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "federal_baseline",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://dor.sc.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -960,14 +1335,16 @@
       ]
     },
     "SD": {
-      "rule_id": "US-SD-2026-V2",
+      "rule_id": "US-SD-2026-V3",
       "display_name": "South Dakota",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "no_income_tax",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://dor.sd.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -979,14 +1356,16 @@
       ]
     },
     "TN": {
-      "rule_id": "US-TN-2026-V2",
+      "rule_id": "US-TN-2026-V3",
       "display_name": "Tennessee",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "no_income_tax",
       "wage_model": "federal_baseline",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://www.tn.gov/revenue.html",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -998,14 +1377,16 @@
       ]
     },
     "TX": {
-      "rule_id": "US-TX-2026-V2",
+      "rule_id": "US-TX-2026-V3",
       "display_name": "Texas",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "no_income_tax",
       "wage_model": "federal_baseline",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://comptroller.texas.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -1017,14 +1398,16 @@
       ]
     },
     "UT": {
-      "rule_id": "US-UT-2026-V2",
+      "rule_id": "US-UT-2026-V3",
       "display_name": "Utah",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "federal_baseline",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://tax.utah.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -1036,14 +1419,16 @@
       ]
     },
     "VT": {
-      "rule_id": "US-VT-2026-V2",
+      "rule_id": "US-VT-2026-V3",
       "display_name": "Vermont",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://tax.vermont.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -1055,14 +1440,16 @@
       ]
     },
     "VA": {
-      "rule_id": "US-VA-2026-V2",
+      "rule_id": "US-VA-2026-V3",
       "display_name": "Virginia",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
+      "tip_tax_conformity": "non_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://www.tax.virginia.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -1074,14 +1461,16 @@
       ]
     },
     "WA": {
-      "rule_id": "US-WA-2026-V2",
+      "rule_id": "US-WA-2026-V3",
       "display_name": "Washington",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "no_income_tax",
       "wage_model": "no_tip_credit",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://dor.wa.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -1094,6 +1483,7 @@
       "sub_jurisdictions": {
         "US-WA-SEA": {
           "display_name": "Seattle",
+          "rule_confidence": "final",
           "effective_periods": [
             {
               "start_date": "2026-01-01",
@@ -1107,33 +1497,37 @@
       }
     },
     "WV": {
-      "rule_id": "US-WV-2026-V2",
+      "rule_id": "US-WV-2026-V3",
       "display_name": "West Virginia",
-      "last_verified_at": "2026-01-01",
-      "rule_confidence": "final",
-      "tip_tax_conformity": "full_conforming",
-      "wage_model": "tip_credit_allowed",
-      "overtime_rule": "weekly_40_only",
-      "prohibits_card_fee_deduction": false,
-      "effective_periods": [
-        {
-          "start_date": "2026-01-01",
-          "end_date": "2026-12-31",
-          "statutory_min_wage_cents": 875,
-          "min_cash_wage_cents": 263,
-          "max_tip_credit_cents": 612
-        }
-      ]
-    },
-    "WI": {
-      "rule_id": "US-WI-2026-V2",
-      "display_name": "Wisconsin",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "non_conforming",
       "wage_model": "tip_credit_allowed",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://tax.wv.gov/",
+      "effective_periods": [
+        {
+          "start_date": "2026-01-01",
+          "end_date": "2026-12-31",
+          "statutory_min_wage_cents": 875,
+          "min_cash_wage_cents": 262,
+          "max_tip_credit_cents": 613
+        }
+      ]
+    },
+    "WI": {
+      "rule_id": "US-WI-2026-V3",
+      "display_name": "Wisconsin",
+      "last_verified_at": "2026-11-05",
+      "rule_confidence": "final",
+      "tip_tax_conformity": "non_conforming",
+      "wage_model": "tip_credit_allowed",
+      "overtime_rule": "weekly_40_only",
+      "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://www.revenue.wi.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",
@@ -1145,14 +1539,16 @@
       ]
     },
     "WY": {
-      "rule_id": "US-WY-2026-V2",
+      "rule_id": "US-WY-2026-V3",
       "display_name": "Wyoming",
-      "last_verified_at": "2026-01-01",
+      "last_verified_at": "2026-11-05",
       "rule_confidence": "final",
       "tip_tax_conformity": "no_income_tax",
       "wage_model": "federal_baseline",
       "overtime_rule": "weekly_40_only",
       "prohibits_card_fee_deduction": false,
+      "official_labor_url": "https://www.dol.gov/agencies/whd/state/minimum-wage/tipped",
+      "official_tax_url": "https://revenue.wyo.gov/",
       "effective_periods": [
         {
           "start_date": "2026-01-01",

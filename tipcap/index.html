@@ -230,7 +230,7 @@
     <!-- 1. English Content (100% Pure English) -->
     <div id="content-en" class="lang-content">
       <header>
-        <div class="badge">U.S. &amp; CANADA · 2026 AUDIT COMPLIANT</div>
+        <div class="badge">U.S. 50 STATES &amp; D.C. · 2026 AUDIT COMPLIANT</div>
         <h1>TipCap</h1>
         <p class="lead">Professional Tip Tracking, FLSA Paycheck Audit &amp; 2026 Federal Tax Intelligence for Servers, Bartenders &amp; Couriers.</p>
       </header>
@@ -264,7 +264,7 @@
     <!-- 2. Spanish Content (100% Pure Spanish) -->
     <div id="content-es" class="lang-content">
       <header>
-        <div class="badge">EE. UU. Y CANADÁ · CUMPLIMIENTO LABORAL 2026</div>
+        <div class="badge">50 ESTADOS DE EE. UU. Y D.C. · CUMPLIMIENTO LABORAL 2026</div>
         <h1>TipCap</h1>
         <p class="lead">Registro profesional de propinas, auditoría de cheques de pago contra retenciones indebidas y deducciones fiscales para meseros, bartenders y repartidores.</p>
       </header>
@@ -298,7 +298,7 @@
     <!-- 3. Vietnamese Content (100% Pure Vietnamese) -->
     <div id="content-vi" class="lang-content">
       <header>
-        <div class="badge">HOA KỲ &amp; CANADA · TUÂN THỦ PHÁP LUẬT 2026</div>
+        <div class="badge">50 TIỂU BANG HOA KỲ &amp; D.C. · TUÂN THỦ PHÁP LUẬT 2026</div>
         <h1>TipCap</h1>
         <p class="lead">Ứng dụng ghi chép tiền tip chuyên nghiệp, đối soát bảng lương FLSA và tính khấu trừ thuế dành cho nhân viên phục vụ, pha chế, tiệm nail và tài xế tại Mỹ.</p>
       </header>
@@ -332,7 +332,7 @@
     <!-- 4. Chinese Content (100% 纯中文) -->
     <div id="content-zh" class="lang-content">
       <header>
-        <div class="badge">全美 50 州与加拿大 · 2026 劳工法案合规</div>
+        <div class="badge">全美 50 州及华盛顿特区 · 2026 劳工法案合规</div>
         <h1>TipCap</h1>
         <p class="lead">专为企台、调酒师、外卖骑手与小费工作者打造的专业小费记账、FLSA 工资单复核与 2026 新税法减免工具。</p>
       </header>
@@ -368,7 +368,9 @@
       <p>
         <a id="footer-privacy" href="privacy.html">Privacy Policy</a>
         <span>·</span>
-        <a id="footer-subs" href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">Manage Subscriptions</a>
+        <a id="footer-subs" href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">Apple Subscriptions</a>
+        <span>·</span>
+        <a id="footer-subs-android" href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener">Google Play Subscriptions</a>
       </p>
     </footer>
   </div>
@@ -380,22 +382,26 @@
       en: {
         title: 'TipCap - Official Support & Product Overview',
         footerPrivacy: 'Privacy Policy',
-        footerSubs: 'Manage Subscriptions'
+        footerSubs: 'Apple Subscriptions',
+        footerSubsAndroid: 'Google Play Subscriptions'
       },
       es: {
         title: 'TipCap - Soporte Oficial e Información del Producto',
         footerPrivacy: 'Política de Privacidad',
-        footerSubs: 'Administrar Suscripciones'
+        footerSubs: 'Suscripciones Apple',
+        footerSubsAndroid: 'Suscripciones Google Play'
       },
       vi: {
         title: 'TipCap - Hỗ Trợ Chính Thức & Giới Thiệu Ứng Dụng',
         footerPrivacy: 'Chính Sách Bảo Mật',
-        footerSubs: 'Quản Lý Gói Đăng Ký'
+        footerSubs: 'Đăng Ký Apple',
+        footerSubsAndroid: 'Đăng Ký Google Play'
       },
       zh: {
         title: 'TipCap - 官方技术支持与产品介绍',
         footerPrivacy: '隐私政策',
-        footerSubs: '管理订阅'
+        footerSubs: '管理 Apple 订阅',
+        footerSubsAndroid: '管理 Google Play 订阅'
       }
     };
 
@@ -424,6 +430,8 @@
       if (footerPrivacy) footerPrivacy.textContent = l10n.footerPrivacy;
       const footerSubs = document.getElementById('footer-subs');
       if (footerSubs) footerSubs.textContent = l10n.footerSubs;
+      const footerSubsAndroid = document.getElementById('footer-subs-android');
+      if (footerSubsAndroid) footerSubsAndroid.textContent = l10n.footerSubsAndroid;
 
       // 共享存储偏好 (与 privacy.html 互通)
       try {
