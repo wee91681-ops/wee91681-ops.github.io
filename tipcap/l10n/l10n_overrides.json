@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "pack_version": 2026112401,
+  "updated_at": "2026-11-24",
+  "notes": "TipCap OTA l10n hotfix override pack. Add key->text entries under en/zh/es/vi and sign with scripts/sign_l10n_overrides.py --sign before pushing to GitHub Pages.",
+  "overrides": {
+    "en": {},
+    "zh": {},
+    "es": {},
+    "vi": {}
+  }
+}
